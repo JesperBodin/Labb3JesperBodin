@@ -5,17 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/ShapeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GM9lHfYnN9INWjT8cBNTfc0MMP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,13 +43,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jepa/Desktop/rey&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jepa\Desktop\Labb3\Labb3JesperBodin\src\main\resources\com\example\labb3jesperbodin" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,7 +68,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666187747421</updated>
-      <workItem from="1666187748616" duration="1000" />
+      <workItem from="1666187748616" duration="5791000" />
+      <workItem from="1666262479196" duration="9199000" />
+      <workItem from="1666271783192" duration="244000" />
+      <workItem from="1666345206267" duration="52000" />
+      <workItem from="1666379226747" duration="636000" />
+      <workItem from="1666609644524" duration="11743000" />
+      <workItem from="1666695271560" duration="6231000" />
+      <workItem from="1666768174576" duration="7574000" />
+      <workItem from="1666863889753" duration="9367000" />
+      <workItem from="1666884610127" duration="3930000" />
+      <workItem from="1667138321644" duration="4668000" />
+      <workItem from="1667212675332" duration="10786000" />
+      <workItem from="1667305751294" duration="6079000" />
+      <workItem from="1667394844195" duration="8879000" />
+      <workItem from="1667412477366" duration="133000" />
+      <workItem from="1667484344233" duration="6046000" />
+      <workItem from="1667498000228" duration="2276000" />
     </task>
     <servers />
   </component>

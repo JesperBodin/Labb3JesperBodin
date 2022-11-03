@@ -1,59 +1,152 @@
-package com.example.labb3jesperbodin;
+package com.example.labb3jesperbodin.controller;
 
+import com.example.labb3jesperbodin.model.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
-import javafx.scene.control.ColorPicker;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-public class Controller  {
 
+public class Controller {
+
+    public CheckBox checkBox;
+    public ColorPicker colorPicker;
+    public Spinner<Integer> spinner;
+    public Button deleteButton;
+    public Button undoButton;
+    public Button changeColorButton;
+    public Button changeSizeButton;
     public Button squareButton;
+    public Button rectangleButton;
     public Button circleButton;
-    public Button pointButton;
-    @FXML
-    ComboBox<String> shapeComboBox = new ComboBox<>();
-    @FXML
-    ComboBox<String> sizeComboBox = new ComboBox<>();
-
     public Canvas canvas;
-
     public GraphicsContext context;
+    public Model model;
+    ObservableList<Shape> shapeObservableList = FXCollections.observableArrayList();
     @FXML
-    private ColorPicker colorPicker;
-    @FXML
-    private Button rectangleButton;
+    ListView<Shape> listViewTest = new ListView<>(shapeObservableList);
 
 
-    public void initialize(){
+    public void initialize() {
+        model = new Model();
+        SpinnerValueFactory<Integer> spinnerValue = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 200);
+        spinner.setValueFactory(spinnerValue);
+
+        colorPicker.valueProperty().bindBidirectional(model.colorProperty());
+        spinnerValue.valueProperty().bindBidirectional(model.sizeProperty());
+
         context = canvas.getGraphicsContext2D();
         canvas.setFocusTraversable(true);
-        context.setFill(Color.rgb(230,230,230));
-        context.fillRect(0,0,500,600);
+        renderCanvas();
+
+        listViewTest.setItems(model.shapes);
     }
 
-    public void drawOnClick(MouseEvent mouseEvent){
-
-        context.setFill(colorPicker.getValue());
-        getShapeFromComboBox(mouseEvent);
+    private void draw() {
+        for (var shape : model.shapes) {
+            shape.draw(context);
+        }
 
     }
 
-    private void getShapeFromComboBox(MouseEvent mouseEvent) {
-        switch (shapeComboBox.getSelectionModel().getSelectedItem()){
-            case "Rectangle":
-                context.fillRect(mouseEvent.getX() -10, mouseEvent.getY() -10,40,20);
+    public void canvasClicked(MouseEvent mouseEvent) {
+        drawOnClick(mouseEvent);
+        listViewTest.getSelectionModel();
+        draw();
+    }
+
+    public void renderCanvas() {
+        context.setFill(Color.WHITE);
+        context.fillRect(0, 0, 610, 713);
+    }
+
+    public void drawOnClick(MouseEvent mouseEvent) {
+        double x = mouseEvent.getX();
+        double y = mouseEvent.getY();
+
+        if (checkBox.isSelected()) {
+            for (var shape : model.shapes) {
+                if (shape.insideShapeCheck(x, y)) {
+                    selectShapes(shape);
+                }
+            }
+        } else shapeType(x, y);
+    }
+
+    public void shapeType(double x, double y) {
+        if (rectangleButton.isFocused()) {
+            addRectangleToObservableList(x, y);
+
+        } else if (circleButton.isFocused()) {
+            addCircleToObservableList(x, y);
+
+        } else if (squareButton.isFocused()) {
+            addSquareToObservableList(x, y);
         }
     }
-    public void drawNewRectangle(MouseEvent mouseEvent){
-        context.setFill(colorPicker.getValue());
-        context.fillRect(250,250,250,250);
+
+
+    private void selectShapes(Shape shape) {
+
+        if (model.selectedShapes.contains(shape)) {
+            model.setBorderColorOnDeselected(shape);
+            model.selectedShapes.remove(shape);
+            System.out.println("AVMARKERAD");
+        } else {
+            model.setBorderColorOnSelected(shape);
+            model.selectedShapes.add(shape);
+            System.out.println("MARKERAD");
+        }
+
     }
-    public boolean rectangleButtonPressed(){
+
+
+    private void addSquareToObservableList(double x, double y) {
+        model.shapes.add(new Square(model.getColor(), x, y, model.getSize()));
+        shapeObservableList.add(new Square(model.getColor(), x, y, model.getSize()));
+
+    }
+
+    private void addCircleToObservableList(double x, double y) {
+        model.shapes.add(new Circle(model.getColor(), x, y, model.getSize()));
+        shapeObservableList.add(new Circle(model.getColor(), x, y, model.getSize()));
+    }
+
+    private void addRectangleToObservableList(double x, double y) {
+        model.shapes.add(new Rectangle(model.getColor(), x, y, model.getSize()));
+        shapeObservableList.add(new Rectangle(model.getColor(), x, y, model.getSize()));
+    }
+
+    public void deleteMarkedShapes() {
+        model.undoShapeDeque.addAll(model.selectedShapes);
+        model.deleteSelectedShape();
+        renderCanvas();
+        draw();
+    }
+
+    public void undoLast() {
+        model.shapes.addAll(model.undoShapeDeque.removeLast());
+        draw();
+
+    }
+
+    public void changeColorOnSelectedShapes() {
+        model.changeColorOnShapes();
+        renderCanvas();
+        draw();
+
+    }
+
+    public void changeSizeOnSelectedShapes() {
+        model.changeSizeOnShapes();
+        renderCanvas();
+        draw();
 
     }
 }
+
 
