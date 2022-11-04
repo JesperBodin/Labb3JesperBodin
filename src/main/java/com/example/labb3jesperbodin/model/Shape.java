@@ -27,7 +27,10 @@ public abstract class Shape {
     }
 
     public Shape (Shape shape){
-
+        setColor(shape.getColor());
+        setSize(shape.getSize());
+        setXPosition(shape.getXPosition());
+        setYPosition(shape.getYPosition());
     }
 
     public ObjectProperty<Color> borderColorProperty() {
@@ -100,5 +103,6 @@ public abstract class Shape {
 
     public abstract boolean insideShapeCheck(double x, double y);
 
+    public abstract Shape copyShape();
 
 }

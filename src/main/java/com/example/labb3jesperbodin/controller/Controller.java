@@ -28,7 +28,8 @@ public class Controller {
     public Model model;
     ObservableList<Shape> shapeObservableList = FXCollections.observableArrayList();
     @FXML
-    ListView<Shape> listViewTest = new ListView<>(shapeObservableList);
+    ListView<Shape> listViewTest = new ListView<>(shapeObservableList); // model.shapes & ta bort Shapeobservablelist
+
 
 
     public void initialize() {
@@ -47,15 +48,13 @@ public class Controller {
     }
 
     private void draw() {
-        for (var shape : model.shapes) {
-            shape.draw(context);
-        }
-
+        model.draw(context);
     }
 
     public void canvasClicked(MouseEvent mouseEvent) {
         drawOnClick(mouseEvent);
-        listViewTest.getSelectionModel();
+        renderCanvas();
+//        listViewTest.getSelectionModel();
         draw();
     }
 
@@ -122,19 +121,22 @@ public class Controller {
     }
 
     public void deleteMarkedShapes() {
-        model.undoShapeDeque.addAll(model.selectedShapes);
+        model.addToUndoDeque();
+//        model.undoShapeDeque.addAll(model.selectedShapes);
         model.deleteSelectedShape();
         renderCanvas();
         draw();
     }
 
     public void undoLast() {
-        model.shapes.addAll(model.undoShapeDeque.removeLast());
+        model.undo();
+        renderCanvas();
         draw();
 
     }
 
     public void changeColorOnSelectedShapes() {
+        model.addToUndoDeque();
         model.changeColorOnShapes();
         renderCanvas();
         draw();
@@ -142,6 +144,7 @@ public class Controller {
     }
 
     public void changeSizeOnSelectedShapes() {
+        model.addToUndoDeque();
         model.changeSizeOnShapes();
         renderCanvas();
         draw();

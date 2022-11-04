@@ -36,4 +36,9 @@ public class Square extends Shape{
 
     }
 
+    @Override
+    public Shape copyShape(){
+        return new Square(this);
+    }
+
 }

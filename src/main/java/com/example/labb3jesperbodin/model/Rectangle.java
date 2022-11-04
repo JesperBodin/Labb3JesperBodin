@@ -33,9 +33,11 @@ public boolean insideShapeCheck(double x, double y){
             x <= xPosition + getSize()*2 &&
             y >= yPosition &&
             y <= yPosition + getSize();
-
-
-
 }
+
+@Override
+public Shape copyShape(){
+    return new Rectangle(this);
+    }
 
 }

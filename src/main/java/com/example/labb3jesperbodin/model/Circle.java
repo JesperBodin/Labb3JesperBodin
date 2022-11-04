@@ -35,4 +35,9 @@ public class Circle extends Shape {
                 y <= yPosition + getSize();
     }
 
+    @Override
+    public Shape copyShape(){
+        return new Circle(this);
+    }
+
 }
