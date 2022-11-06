@@ -1,4 +1,4 @@
-package com.example.labb3jesperbodin.model;
+package com.example.labb3jesperbodin.shapes;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.ObjectProperty;

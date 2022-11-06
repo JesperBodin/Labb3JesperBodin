@@ -9,4 +9,6 @@ module com.example.labb3jesperbodin {
     opens com.example.labb3jesperbodin.model to javafx.fxml;
     exports com.example.labb3jesperbodin.controller;
     opens com.example.labb3jesperbodin.controller to javafx.fxml;
+    exports com.example.labb3jesperbodin.shapes;
+    opens com.example.labb3jesperbodin.shapes to javafx.fxml;
 }

@@ -1,9 +1,9 @@
-package com.example.labb3jesperbodin.model;
+package com.example.labb3jesperbodin.shapes;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Square extends Shape{
+public class Square extends Shape {
 
     public Square(Color color, double xPosition, double yPosition, double size){
         super(color, xPosition, yPosition, size);

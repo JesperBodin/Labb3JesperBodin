@@ -1,6 +1,6 @@
 package com.example.labb3jesperbodin.model;
 
-import com.example.labb3jesperbodin.controller.Controller;
+import com.example.labb3jesperbodin.shapes.Shape;
 import javafx.beans.Observable;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

@@ -1,6 +1,10 @@
 package com.example.labb3jesperbodin.controller;
 
 import com.example.labb3jesperbodin.model.*;
+import com.example.labb3jesperbodin.shapes.Circle;
+import com.example.labb3jesperbodin.shapes.Rectangle;
+import com.example.labb3jesperbodin.shapes.Shape;
+import com.example.labb3jesperbodin.shapes.Square;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
