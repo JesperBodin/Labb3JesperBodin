@@ -5,6 +5,7 @@ import com.example.labb3jesperbodin.shapes.Circle;
 import com.example.labb3jesperbodin.shapes.Rectangle;
 import com.example.labb3jesperbodin.shapes.Shape;
 import com.example.labb3jesperbodin.shapes.Square;
+import com.example.labb3jesperbodin.svg.SVGWriter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,6 +28,7 @@ public class Controller {
     public Button squareButton;
     public Button rectangleButton;
     public Button circleButton;
+    public Button saveButton;
     public Canvas canvas;
     public GraphicsContext context;
     public Model model;
@@ -58,7 +60,6 @@ public class Controller {
     public void canvasClicked(MouseEvent mouseEvent) {
         drawOnClick(mouseEvent);
         renderCanvas();
-//        listViewTest.getSelectionModel();
         draw();
     }
 
@@ -153,6 +154,11 @@ public class Controller {
         renderCanvas();
         draw();
 
+    }
+
+    public void saveToFile(MouseEvent mouseEvent) {
+        SVGWriter svgFile = new SVGWriter();
+        svgFile.saveToFile(model);
     }
 }
 

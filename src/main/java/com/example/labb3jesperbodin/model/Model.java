@@ -20,6 +20,8 @@ public class Model {
     private final ObjectProperty<Color> borderColor;
     private final ObjectProperty<Integer> size;
 
+
+
     public ObservableList<Shape> shapes;
 
     public ObservableList<Shape> selectedShapes;
@@ -63,6 +65,10 @@ public class Model {
         return borderColor;
     }
 
+
+    public ObservableList<Shape> getShapes() {
+        return shapes;
+    }
 
     public ObjectProperty<Color> colorProperty() {
         return color;

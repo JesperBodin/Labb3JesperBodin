@@ -41,4 +41,14 @@ public class Square extends Shape {
         return new Square(this);
     }
 
+    @Override
+    public String writeSvg() {
+        String svgColorCode = "#" + getColor().toString().substring(2, 10);
+        return "<rect fill=\"" + svgColorCode +
+                "\" width=\"" + getSize() +
+                "\" height=\"" + getSize() +
+                "\" x=\"" + getXPosition() +
+                "\" y=\"" + getYPosition() +
+                "\" />";
+    }
 }

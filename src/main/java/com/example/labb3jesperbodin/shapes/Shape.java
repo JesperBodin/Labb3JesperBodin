@@ -96,7 +96,6 @@ public abstract class Shape {
 
 
 
-
     public void draw(GraphicsContext graphicsContext){
 
     }
@@ -104,5 +103,7 @@ public abstract class Shape {
     public abstract boolean insideShapeCheck(double x, double y);
 
     public abstract Shape copyShape();
+
+    public abstract String writeSvg();
 
 }
