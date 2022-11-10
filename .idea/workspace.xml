@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="package shapes added &amp; 3 tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/svg/SVGWriter.java" afterDir="false" />
+    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="add SVGWriter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +134,8 @@
       <workItem from="1667838701373" duration="7962000" />
       <workItem from="1667922857527" duration="2148000" />
       <workItem from="1668001898799" duration="891000" />
-      <workItem from="1668002799683" duration="6110000" />
+      <workItem from="1668002799683" duration="6293000" />
+      <workItem from="1668081225470" duration="6194000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1667506522192</created>
@@ -159,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667755102274</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add SVGWriter">
+      <created>1668009014500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668009014500</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +186,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="undo color &amp; size added" />
     <MESSAGE value="package shapes added &amp; 3 tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="package shapes added &amp; 3 tests" />
+    <MESSAGE value="add SVGWriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add SVGWriter" />
   </component>
 </project>

@@ -3,11 +3,9 @@ package com.example.labb3jesperbodin.model;
 import com.example.labb3jesperbodin.shapes.Circle;
 import com.example.labb3jesperbodin.shapes.Shape;
 import com.example.labb3jesperbodin.shapes.Square;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.paint.Color;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 import com.example.labb3jesperbodin.shapes.Rectangle;
 

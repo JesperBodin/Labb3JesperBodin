@@ -6,9 +6,9 @@ import com.example.labb3jesperbodin.shapes.Rectangle;
 import com.example.labb3jesperbodin.shapes.Shape;
 import com.example.labb3jesperbodin.shapes.Square;
 import com.example.labb3jesperbodin.svg.SVGWriter;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
@@ -33,10 +33,6 @@ public class Controller {
     public GraphicsContext context;
     public Model model;
     ObservableList<Shape> shapeObservableList = FXCollections.observableArrayList();
-    @FXML
-    ListView<Shape> listViewTest = new ListView<>(shapeObservableList); // model.shapes & ta bort Shapeobservablelist
-
-
 
     public void initialize() {
         model = new Model();
@@ -49,26 +45,25 @@ public class Controller {
         context = canvas.getGraphicsContext2D();
         canvas.setFocusTraversable(true);
         renderCanvas();
-
-        listViewTest.setItems(model.shapes);
+        model.shapes.addListener(this::listChanged);
     }
-
-    private void draw() {
-        model.draw(context);
-    }
-
-    public void canvasClicked(MouseEvent mouseEvent) {
-        drawOnClick(mouseEvent);
+    private void listChanged(Observable observable) {
         renderCanvas();
         draw();
     }
-
     public void renderCanvas() {
         context.setFill(Color.WHITE);
         context.fillRect(0, 0, 610, 713);
     }
+    private void draw() {
+        model.draw(context);
+    }
 
-    public void drawOnClick(MouseEvent mouseEvent) {
+
+
+
+
+    public void canvasClicked(MouseEvent mouseEvent) {
         double x = mouseEvent.getX();
         double y = mouseEvent.getY();
 
@@ -99,11 +94,9 @@ public class Controller {
         if (model.selectedShapes.contains(shape)) {
             model.setBorderColorOnDeselected(shape);
             model.selectedShapes.remove(shape);
-            System.out.println("AVMARKERAD");
         } else {
             model.setBorderColorOnSelected(shape);
             model.selectedShapes.add(shape);
-            System.out.println("MARKERAD");
         }
 
     }
@@ -127,36 +120,23 @@ public class Controller {
 
     public void deleteMarkedShapes() {
         model.addToUndoDeque();
-//        model.undoShapeDeque.addAll(model.selectedShapes);
         model.deleteSelectedShape();
-        renderCanvas();
-        draw();
     }
-
     public void undoLast() {
         model.undo();
-        renderCanvas();
-        draw();
-
     }
 
     public void changeColorOnSelectedShapes() {
         model.addToUndoDeque();
         model.changeColorOnShapes();
-        renderCanvas();
-        draw();
-
     }
 
     public void changeSizeOnSelectedShapes() {
         model.addToUndoDeque();
         model.changeSizeOnShapes();
-        renderCanvas();
-        draw();
-
     }
 
-    public void saveToFile(MouseEvent mouseEvent) {
+    public void saveToFile() {
         SVGWriter svgFile = new SVGWriter();
         svgFile.saveToFile(model);
     }

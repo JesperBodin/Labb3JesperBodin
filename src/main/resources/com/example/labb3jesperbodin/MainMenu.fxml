@@ -4,7 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labb3jesperbodin.controller.Controller">
+<AnchorPane maxHeight="Infinity" maxWidth="Infinity" prefHeight="800" prefWidth="600"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.labb3jesperbodin.controller.Controller">
 
 
 
@@ -19,13 +21,15 @@
     </HBox>
 
         <Canvas fx:id="canvas" height="713.0" layoutY="89.0" onMouseClicked="#canvasClicked" width="610.0" />
-        <CheckBox fx:id="checkBox" layoutX="235.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0" text="Select Mode" />
+        <CheckBox fx:id="checkBox" layoutX="235.0" layoutY="14.0" prefHeight="25.0" prefWidth="95.0"
+                  text="Select Mode" />
      <Button fx:id="deleteButton" layoutX="405.0" layoutY="46.0" onMouseClicked="#deleteMarkedShapes" text="Delete" />
-   <ListView fx:id="listViewTest" layoutX="397.0" layoutY="104.0" prefHeight="277.0" prefWidth="207.0" />
-   <Button fx:id="undoButton" layoutX="544.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#undoLast" text="Undo" />
-   <Button fx:id="changeColorButton" layoutX="235.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#changeColorOnSelectedShapes" text="Change Color" />
-   <Button fx:id="changeSizeButton" layoutX="324.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#changeSizeOnSelectedShapes" text="Change Size" />
-   <Button fx:id="saveButton" layoutX="544.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0" text="Save" onMouseClicked="#saveToFile" />
-
-
+   <Button fx:id="undoButton" layoutX="544.0" layoutY="46.0" mnemonicParsing="false"
+           onMouseClicked="#undoLast" text="Undo" />
+   <Button fx:id="changeColorButton" layoutX="235.0" layoutY="46.0" mnemonicParsing="false"
+           onMouseClicked="#changeColorOnSelectedShapes" text="Change Color" />
+   <Button fx:id="changeSizeButton" layoutX="324.0" layoutY="46.0" mnemonicParsing="false"
+           onMouseClicked="#changeSizeOnSelectedShapes" text="Change Size" />
+   <Button fx:id="saveButton" layoutX="544.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="46.0"
+           text="Save" onMouseClicked="#saveToFile" />
 </AnchorPane>

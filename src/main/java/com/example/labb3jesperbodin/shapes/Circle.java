@@ -45,8 +45,8 @@ public class Circle extends Shape {
         String svgColorCode = "#" + getColor().toString().substring(2,10);
         return "<circle fill=\"" + svgColorCode +
                 "\" r=\"" + getSize()/2  +
-                "\" cx=\"" + (getXPosition() +getSize()/2) +
-                "\" cy=\"" + (getYPosition() + getSize()/2) +
+                "\" cx=\"" + (getXPosition() + 25) +
+                "\" cy=\"" + (getYPosition() + 25) +
                 "\" />";
     }
 
