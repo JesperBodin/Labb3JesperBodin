@@ -47,8 +47,8 @@ public Shape copyShape(){
         return "<rect fill=\"" + svgColorCode +
                 "\" width=\"" + (getSize() * 2)  +
                 "\" height=\"" + getSize()  +
-                "\" x=\"" + getXPosition() +
-                "\" y=\"" + getYPosition() +
+                "\" x=\"" + (getXPosition() - (getSize()/2)) +
+                "\" y=\"" + (getYPosition() - (getSize()/2)) +
                 "\" />";
     }
 

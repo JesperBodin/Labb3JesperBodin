@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="add SVGWriter">
+    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="listChanged added&#10;testList removed&#10;Warnings fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" afterDir="false" />
     </list>
@@ -96,10 +97,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ModelTest.testDefaultShapeColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labb3JesperBodin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.labb3jesperbodin.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.labb3jesperbodin.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.labb3jesperbodin.model.ModelTest" />
+      <option name="METHOD_NAME" value="testDefaultShapeColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelTest.testDefaultShapeSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labb3JesperBodin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.labb3jesperbodin.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.labb3jesperbodin.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.labb3jesperbodin.model.ModelTest" />
+      <option name="METHOD_NAME" value="testDefaultShapeSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelTest.testInsideShapeCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Labb3JesperBodin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.labb3jesperbodin.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.labb3jesperbodin.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.labb3jesperbodin.model.ModelTest" />
+      <option name="METHOD_NAME" value="testInsideShapeCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ModelTest.testInsideShapeCheck" />
+        <item itemvalue="JUnit.ModelTest.testDefaultShapeColor" />
         <item itemvalue="JUnit.ModelTest" />
+        <item itemvalue="JUnit.ModelTest.testDefaultShapeSize" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +187,9 @@
       <workItem from="1667922857527" duration="2148000" />
       <workItem from="1668001898799" duration="891000" />
       <workItem from="1668002799683" duration="6293000" />
-      <workItem from="1668081225470" duration="6194000" />
+      <workItem from="1668081225470" duration="6728000" />
+      <workItem from="1668112987306" duration="4458000" />
+      <workItem from="1668157617886" duration="10435000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1667506522192</created>
@@ -165,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668009014500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="listChanged added&#10;testList removed&#10;Warnings fixed">
+      <created>1668087646733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668087646733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +248,7 @@
     <MESSAGE value="undo color &amp; size added" />
     <MESSAGE value="package shapes added &amp; 3 tests" />
     <MESSAGE value="add SVGWriter" />
-    <option name="LAST_COMMIT_MESSAGE" value="add SVGWriter" />
+    <MESSAGE value="listChanged added&#10;testList removed&#10;Warnings fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="listChanged added&#10;testList removed&#10;Warnings fixed" />
   </component>
 </project>

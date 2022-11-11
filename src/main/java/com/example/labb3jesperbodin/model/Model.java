@@ -70,12 +70,12 @@ public class Model {
             shapes.remove(shape);
         }
     }
-    public void changeColorOnShapes() {
+    public void changeColorOfShapes() {
         for (var shape : selectedShapes) {
             shape.setColor(getColor());
         }
     }
-    public void changeSizeOnShapes() {
+    public void changeSizeOfShapes() {
         for (var shape : selectedShapes) {
             shape.setSize(getSize());
         }

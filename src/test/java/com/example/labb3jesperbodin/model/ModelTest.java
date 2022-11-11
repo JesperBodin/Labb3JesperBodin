@@ -1,64 +1,45 @@
 package com.example.labb3jesperbodin.model;
 
 import com.example.labb3jesperbodin.shapes.Circle;
-import com.example.labb3jesperbodin.shapes.Shape;
-import com.example.labb3jesperbodin.shapes.Square;
-import javafx.collections.ObservableList;
 import javafx.scene.paint.Color;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import com.example.labb3jesperbodin.shapes.Rectangle;
+
 
 class ModelTest {
 
     Model model = new Model();
 
     @Test
-    void addNewRectangleToShapesList(){
+    void testDefaultShapeValues(){
 
-        model.shapes.add(new Rectangle(Color.BLUE,25,25,50));
+        var colorActual =new Model().getColor();
+        var sizeActual = new Model().getSize();
 
-        var actual = 1;
-        var contains = model.shapes.size();
-
-        assertEquals(actual, contains);
+        assertEquals(Color.RED,colorActual);
+        assertEquals(50,sizeActual);
 
     }
-
     @Test
-    void  addShapeFromShapeObservableListToTemporaryListInsideUndoDeque(){
+    void testInsideShapeCheck(){
 
-        model.shapes.add(new Rectangle(Color.RED,25,25,50));
-        model.shapes.add(new Circle(Color.RED,25,25,50));
-        model.shapes.add(new Square(Color.RED,25,25,50));
-        model.addToUndoDeque();
+        model.shapes.add(new Circle(Color.BLUE,75,75,50));
 
-        var expected = 3;
-        var actual = model.getTemporaryShapeList().size();
+        double mousePositionXInside = 75.0;
+        double mousePositionYInside = 75.0;
 
-        assertEquals(expected,actual);
+        var insideExpected = true;
+        var insideActual = false;
 
-    }
 
-    @Test
-    void passLastShapeFromUndoDequeToShapesObservableList(){
+        for (var shape: model.shapes){
+            if (shape.insideShapeCheck(mousePositionXInside,mousePositionYInside)){
+                insideActual = true;
+            }
+        }
 
-//        model.shapes.add(new Rectangle(Color.GREEN,25,25,50));
-        model.shapes.add(new Rectangle(Color.RED,25,25,50));
-        model.shapes.add(new Circle(Color.RED,25,25,50));
-        model.shapes.add(new Square(Color.RED,25,25,50));
-
-        ObservableList<Shape> temporaryList = model.getTemporaryShapeList();
-        model.undoShapeDeque.addLast(temporaryList);
-        model.shapes.clear();
-        model.shapes.addAll(temporaryList);
-
-        var expected = 3;
-        var actual =model.shapes.size();
-
-        assertEquals(expected,actual);
+        assertEquals(insideExpected,insideActual);
 
     }
-
 
 }

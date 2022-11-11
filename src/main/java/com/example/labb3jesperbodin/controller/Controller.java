@@ -126,14 +126,14 @@ public class Controller {
         model.undo();
     }
 
-    public void changeColorOnSelectedShapes() {
+    public void changeColorOfSelectedShapes() {
         model.addToUndoDeque();
-        model.changeColorOnShapes();
+        model.changeColorOfShapes();
     }
 
-    public void changeSizeOnSelectedShapes() {
+    public void changeSizeOfSelectedShapes() {
         model.addToUndoDeque();
-        model.changeSizeOnShapes();
+        model.changeSizeOfShapes();
     }
 
     public void saveToFile() {
