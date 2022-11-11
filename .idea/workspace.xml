@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="listChanged added&#10;testList removed&#10;Warnings fixed">
+    <list default="true" id="7061a570-ecf0-4247-a3d6-c0192f486083" name="Changes" comment="shapes svg positions fixed&#10;tests added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/labb3jesperbodin/shapes/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/labb3jesperbodin/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/labb3jesperbodin/model/ModelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
       <recent name="com.example.labb3jesperbodin.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ModelTest.testInsideShapeCheck">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.labb3jesperbodin.Main" />
       <module name="Labb3JesperBodin" />
@@ -147,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ModelTest.testInsideShapeCheck" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ModelTest.testDefaultShapeColor" />
         <item itemvalue="JUnit.ModelTest" />
         <item itemvalue="JUnit.ModelTest.testDefaultShapeSize" />
@@ -189,7 +182,7 @@
       <workItem from="1668002799683" duration="6293000" />
       <workItem from="1668081225470" duration="6728000" />
       <workItem from="1668112987306" duration="4458000" />
-      <workItem from="1668157617886" duration="10435000" />
+      <workItem from="1668157617886" duration="11258000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1667506522192</created>
@@ -226,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668087646733</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="shapes svg positions fixed&#10;tests added">
+      <created>1668172581676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668172581676</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +249,7 @@
     <MESSAGE value="package shapes added &amp; 3 tests" />
     <MESSAGE value="add SVGWriter" />
     <MESSAGE value="listChanged added&#10;testList removed&#10;Warnings fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="listChanged added&#10;testList removed&#10;Warnings fixed" />
+    <MESSAGE value="shapes svg positions fixed&#10;tests added" />
+    <option name="LAST_COMMIT_MESSAGE" value="shapes svg positions fixed&#10;tests added" />
   </component>
 </project>

@@ -25,20 +25,20 @@ class ModelTest {
 
         model.shapes.add(new Circle(Color.BLUE,75,75,50));
 
-        double mousePositionXInside = 75.0;
-        double mousePositionYInside = 75.0;
+        double mousePositionX = 75.0;
+        double mousePositionY = 75.0;
 
-        var insideExpected = true;
-        var insideActual = false;
+        var Expected = true;
+        var Actual = false;
 
 
         for (var shape: model.shapes){
-            if (shape.insideShapeCheck(mousePositionXInside,mousePositionYInside)){
-                insideActual = true;
+            if (shape.insideShapeCheck(mousePositionX,mousePositionY)){
+                Actual = true;
             }
         }
 
-        assertEquals(insideExpected,insideActual);
+        assertEquals(Expected,Actual);
 
     }
 
